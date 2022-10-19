@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #61788C; 
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+/*cabeçalho==============================================================================*/
+.cabecalho{
+    height: 10vh;
+    background: #2A4359;
+    display: flex;
+}
+
+.logo > img{
+    width: 160px;
+    height: auto;
+    position: absolute;
+    left: 20%;
+}
+/*nevegação==============================================================================*/
+.nav-lista{
+    display: flex;
+    padding: 35px;
+    position: absolute;
+    left: 47%;
+}
+.nav-lista > li{
+    margin-left: 30px;
+}
+
+.nav-lista > li > a{
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #0b2c57;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    position: relative;
+    transition: .5s;
+}
+
+.nav-lista > li > a:hover{
+    letter-spacing: .20rem;
+    color: #F3C288;
+    cursor: pointer;
+}
+
+li > a span{
+    position: absolute;
+    display: block;
+    background: #F3C288;
+}
+
+li > a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+li > a:hover span:nth-child(1){
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+li > a span:nth-child(2){
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+
+li > a:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*=======================================================================================*/
+/*principal==============================================================================*/
+.principal{
+    display: flex;
+    background: url(bg2.jpg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    height: 92vh
+}
+.sessao-principal{
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    right: 6%;
+    display: flex;
+    width: 1500px;
+    height: 800px;
+    border-radius: 30px;
+    background: #000000cb;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.divisao-jogos{
+    align-items: center;
+    position: absolute;
+    right: 23%;
+    top: 5%;
+    display: flex;
+    width: 1130px;
+    height: 700px;
+    background: #9fb3bf17;
+    flex-wrap: wrap;
+    border-radius: 30px;
+}
+.divisao-jogos > a{
+    margin-left: 23px;
+}
+.divisao-jogos > a:hover{
+    opacity: .8;
+}
+/*nave flutuante=========================================================================*/
+.nave-01{
+    position: absolute;
+    top: 12%;
+    left: 80%;
+}
+
+.nave-01 > img{
+    animation: flutuacao 10s ease-in-out infinite;
+}
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.nave-03{
+    position: absolute;
+    left: 79%;
+    bottom: 20%;
+}
+
+.nave-03 > img{
+    animation: flutuacao 10s ease-in-out infinite;
+}
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+/*=======================================================================================*/
+/*rodape=================================================================================*/
+.rodape{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #4988BF;
+}
+.rodape p{
+    position: absolute;
+    left: 35%;
+}
+.rodape a{
+    align-items: center;
+    margin-left: 5px;
+}
+.rodape a:hover{
+    opacity: .8;
+}

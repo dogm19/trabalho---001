@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #61788C; 
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+/*cabeçalho==============================================================================*/
+.cabecalho{
+    height: 10vh;
+    background: #2A4359;
+    display: flex;
+}
+
+.logo > img{
+    width: 160px;
+    height: auto;
+    position: absolute;
+    left: 20%;
+}
+/*nevegação==============================================================================*/
+.nav-lista{
+    display: flex;
+    padding: 35px;
+    position: absolute;
+    left: 47%;
+}
+.nav-lista > li{
+    margin-left: 30px;
+}
+
+.nav-lista > li > a{
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #0b2c57;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    position: relative;
+    transition: .5s;
+}
+
+.nav-lista > li > a:hover{
+    letter-spacing: .20rem;
+    color: #F3C288;
+    cursor: pointer;
+}
+
+li > a span{
+    position: absolute;
+    display: block;
+    background: #F3C288;
+}
+
+li > a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+li > a:hover span:nth-child(1){
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+li > a span:nth-child(2){
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+
+li > a:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*=======================================================================================*/
+/*principal==============================================================================*/
+.principal{
+    display: flex;
+    background: url(bg2.jpg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 92vh
+}
+.conteiner{
+    width: 50%;
+    background: #F3C288;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px #928c8c;
+}
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.esquerda{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+.esquerda::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2A4359; 
+}
+.detalhes-endereco{
+    margin: 14px;
+    text-align: center;
+}
+.conteudo img{
+    margin-bottom: 10px;
+}
+.topico{
+    font-size: 18px;
+    font-weight: 500;
+}
+.conteudo .esquerda .detalhes-endereco .texto-01, .texto-02{
+    font-size: 14px;
+    color: #6b6868ec;
+}
+.direita{
+    width: 75%;
+    margin-left: 75px;
+}
+.topico-box{
+    font-size: 23px;
+    font-weight: 600;
+    color: #2A4359;
+}
+.input-box, .input-box-m{
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+.input-box input, .input-box textarea, .input-box-m textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #c59e6f81;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+}
+.input-box-m{
+    min-height: 6px;
+}
+.input-box textarea{
+    padding-top: 6px;
+}
+.botao input{
+    background: #2A4359;
+    border: #F3C288;
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.botao input:hover{
+    background: #61788C;
+}
+/*=======================================================================================*/
+/*rodape=================================================================================*/
+.rodape{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #4988BF;
+}
+.rodape p{
+    position: absolute;
+    left: 35%;
+}
+.rodape a{
+    align-items: center;
+    margin-left: 5px;
+}
+.rodape a:hover{
+    opacity: .8;
+}
+/*nave flutuante=========================================================================*/
+.nave-01{
+    position: absolute;
+    top: 12%;
+    left: 67%;
+}
+
+.nave-01 > img{
+    animation: flutuacao 10s ease-in-out infinite;
+}
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.nave-03{
+    position: absolute;
+    left: 2%;
+    bottom: 60%;
+}
+
+.nave-03 > img{
+    animation: flutuacao 10s ease-in-out infinite;
+}
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}

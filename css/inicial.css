@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #61788C; 
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+/*cabeçalho==============================================================================*/
+.cabecalho{
+    height: 10vh;
+    background: #2A4359;
+    display: flex;
+}
+
+.logo > img{
+    width: 160px;
+    height: auto;
+    position: absolute;
+    left: 20%;
+}
+/*nevegação==============================================================================*/
+.nav-lista{
+    display: flex;
+    padding: 35px;
+    position: absolute;
+    left: 47%;
+}
+
+.nav-lista > li{
+    margin-left: 30px;
+}
+
+.nav-lista > li > a{
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #0b2c57;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    position: relative;
+    transition: .5s;
+}
+
+.nav-lista > li > a:hover{
+    letter-spacing: .20rem;
+    color: #F3C288;
+    cursor: pointer;
+}
+
+li > a span{
+    position: absolute;
+    display: block;
+    background: #F3C288;
+}
+
+li > a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 50.5%;
+    height: 1.5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+li > a:hover span:nth-child(1){
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+li > a span:nth-child(2){
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+
+li > a:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*=======================================================================================*/
+/*principal==============================================================================*/
+.principal{
+    display: flex;
+    background: url(bg2.jpg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    height: 92vh
+}
+
+.logo-2{
+    position: absolute;
+    left: 30%;
+    bottom: 40%;
+}
+/*=======================================================================================*/
+/*barra de pesquisa======================================================================*/
+.pesquisa-bar{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F3C288;
+    height: 40px;
+    width: 460px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pesquisa-texto{
+    width: 400px;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #2A4359;
+    font-size: 16px;
+    line-height: 40px;  
+}
+
+.pesquisa-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e2891c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa-btn:hover{
+    opacity: .7;
+}
+/*=======================================================================================*/
+/*nave flutuante=========================================================================*/
+.nave-01{
+    position: absolute;
+    top: 12%;
+    left: 67%;
+}
+
+.nave-01 > img{
+    animation: flutuacao 10s ease-in-out infinite;
+}
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+
+.nave-03{
+    position: absolute;
+    left: 2%;
+    bottom: 20%;
+}
+
+.nave-03 > img{
+    animation: flutuacao 10s ease-in-out infinite;
+}
+
+@keyframes flutuacao{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+}
+/*=======================================================================================*/
+/*rodape=================================================================================*/
+.rodape{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #4988BF;
+}
+.rodape p{
+    position: absolute;
+    left: 35%;
+}
+.rodape a{
+    align-items: center;
+    margin-left: 5px;
+}
+.rodape a:hover{
+    opacity: .8;
+}
+/*populares==============================================================================*/
+.popular{
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    right: 20%;
+    display: flex;
+    width: 1000px;
+    height: 100px;
+    background: #61788c3a;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 30px;
+}
+.popular h1{ 
+    font-size: 50px;
+    align-items: center;
+    color: #c2c9cf;
+    margin-bottom: 20px;
+}
+.popular > p{
+    font-size: larger;
+    color: #CCD4D9;
+}
+/*=======================================================================================*/
